@@ -1,2 +1,6 @@
-dist 
-prepros.config
+dist
+node_modules/
+img
+
+gulp/version.json
+package-lock.json
