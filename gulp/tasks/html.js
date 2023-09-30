@@ -2,6 +2,7 @@ import fileinclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import removeEmptyLines from 'gulp-remove-empty-lines';
 import gulpVersionNumber from 'gulp-version-number';
+import gulpPrettier from 'gulp-prettier';
 
 export function html() {
   return app.gulp
@@ -31,6 +32,7 @@ export function html() {
         },
       })
     )
+    .pipe(gulpPrettier())
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream());
 }

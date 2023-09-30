@@ -13,3 +13,32 @@ button {
   background: black;
   width: 200px;
 }
+
+.card {
+  background: #333333;
+  color: white;
+  font-family: Arial;
+  width: fit-content;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  &__tags {
+    display: inline-block;
+    font-size: 14px;
+    color: #afafaf;
+    font-style: italic;
+
+    ul {
+      list-style: circle;
+      padding: 0;
+      margin: 0 0 10px 10px;
+    }
+  }
+
+  &__description {
+    font-size: 80px;
+  }
+}
