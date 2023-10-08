@@ -1,4 +1,4 @@
-import * as dartSass from 'sass';
+import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
 
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
@@ -6,7 +6,7 @@ import webpCss from 'gulp-webpcss';
 import autoPrefixer from 'gulp-autoprefixer';
 import cleanCss from 'gulp-clean-css';
 
-const sass = gulpSass(dartSass);
+const gSass = gulpSass(sass);
 
 export function scss() {
   return app.gulp
@@ -20,8 +20,9 @@ export function scss() {
       )
     )
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
+    .pipe(app.plugins.replace(/@fonts\//g, '../../fonts/'))
     .pipe(
-      sass({
+      gSass({
         outputStyle: 'expanded',
       })
     )
