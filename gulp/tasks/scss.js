@@ -19,8 +19,6 @@ export function scss() {
         })
       )
     )
-    .pipe(app.plugins.replace(/@img\//g, '../img/'))
-    .pipe(app.plugins.replace(/@fonts\//g, '../../fonts/'))
     .pipe(
       gSass({
         outputStyle: 'expanded',
@@ -40,6 +38,7 @@ export function scss() {
       })
     )
     .pipe(groupCssMediaQueries())
+    .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(cleanCss())
     .pipe(

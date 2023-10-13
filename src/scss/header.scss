@@ -1,0 +1,55 @@
+.header {
+  &__container {
+    // border: 1px solid red;
+
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+
+    & > * {
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  &__mini-logo-container {
+    display: flex;
+    gap: 9px;
+    justify-self: start;
+  }
+
+  &__mini-logo {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  &__ul {
+    display: flex;
+    gap: 54px;
+  }
+
+  &__li {
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.mini-logo-part1 {
+  background-color: $color-logo-part1;
+}
+.mini-logo-part2 {
+  background-color: $color-logo-part2;
+}
+.mini-logo-part3 {
+  background-color: $color-logo-part3;
+}

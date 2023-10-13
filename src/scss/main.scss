@@ -1,12 +1,37 @@
-header {
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.473);
+body {
+  color: $color-primary;
+  background-color: $color-background;
 }
 
-div {
-  font-size: 30px;
+// .brands {
+//   display: flex;
+//   gap ?;
+//   font-size: ?px;
 
-  @media (max-width: 767px) {
-    font-size: 15px;
-  }
-}
+//   * {
+//     border: 1px solid red;
+//   }
+
+//   *::before {
+//     display: inline-block;
+//   }
+
+//   .icon--oakville::before {
+//     font-size: 0.65em;
+//     transform: translateY(-0.15em);
+//   }
+
+//   .icon--first-class-flooring::before {
+//     font-size: 0.67em;
+//     transform: translateY(-0.16em);
+//   }
+
+//   .icon--first-ontario::before {
+//     font-size: 0.35em;
+//     transform: translateY(-0.75em);
+//   }
+
+//   .icon--ginos-pizza::before {
+//     font-size: 0.96em;
+//   }
+// }

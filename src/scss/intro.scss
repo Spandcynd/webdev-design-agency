@@ -1,0 +1,42 @@
+.intro {
+  &__container {
+    // border: 1px solid orange;
+
+    display: flex;
+    gap: 37px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__socials li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    writing-mode: vertical-lr;
+    width: 1em;
+  }
+
+  &__main {
+    padding: 6em 0;
+  }
+
+  &__main h1 {
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    display: inline-block;
+    padding: 22px 50px;
+    color: inherit;
+    vertical-align: middle;
+    background-color: $color-accent;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+}

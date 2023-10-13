@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css\style.min.css" />
+    @@include('./html/fonts.html')
     <title>Document</title>
   </head>
-  <body>
-    @@include('./html/header.html')
-    <div>HELLO!</div>
+  <body class="no-webp">
+    @@include('./html/header-background.html') @@include('./html/header.html')
+    @@include('./html/intro.html')
   </body>
 </html>
