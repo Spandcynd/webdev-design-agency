@@ -1,0 +1,74 @@
+.services {
+  &__bullet {
+    width: 8px;
+    height: 8px;
+    background-color: $color-accent;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__subtitle {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__subtitle h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-secondary;
+    text-transform: uppercase;
+    margin-top: calc(16 / 14) + em;
+    margin-bottom: calc(8 / 14) + em;
+  }
+
+  &__main {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: capitalize;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cards-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    // justify-content: space-between;
+    > * {
+      flex-basis: 25%;
+    }
+  }
+
+  .card {
+    background-color: $color-tertiary;
+    padding: 50px;
+
+    > *:not(.card__icon) {
+      line-height: 1.2;
+    }
+
+    &__icon {
+      font-size: 72px;
+    }
+
+    &__name {
+      margin: 24px 0;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: capitalize;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-secondary;
+    }
+
+    &__line {
+      height: 1px;
+      background-color: $color-secondary;
+      margin-top: 24px;
+    }
+  }
+}
