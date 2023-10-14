@@ -2,8 +2,13 @@
   max-width: $cont-dis + px;
   margin: 0 auto;
   padding: 37px 20px;
+  box-sizing: content-box;
 }
 
 body.borders .container {
   border: 1px solid orange;
+}
+
+.text-accent {
+  color: $color-accent;
 }
