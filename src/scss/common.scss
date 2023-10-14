@@ -1,5 +1,9 @@
 .container {
-  max-width: $cont-dis;
+  max-width: $cont-dis + px;
   margin: 0 auto;
   padding: 37px 20px;
+}
+
+body.borders .container {
+  border: 1px solid orange;
 }

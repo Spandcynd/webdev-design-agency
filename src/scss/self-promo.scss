@@ -1,0 +1,52 @@
+.self-promo {
+  .swiper-container {
+    display: flex;
+    gap: 15px;
+  }
+
+  .img-container {
+    flex-basis: 33.333%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    .text-zone {
+      align-self: flex-end;
+      flex-basis: 100%;
+    }
+
+    &:nth-child(1) {
+      background-image: url('@img/image3.png');
+    }
+    &:nth-child(2) {
+      background-image: url('@img/image4.png');
+    }
+    &:nth-child(3) {
+      background-image: url('@img/image5.png');
+    }
+
+    .text-zone {
+      background-color: $color-tertiary;
+      margin: 20px;
+      padding: 24px 32px;
+      position: relative;
+
+      &__text {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      &__badge-container {
+        position: absolute;
+        top: -50%;
+        right: 20px;
+        padding: 12px;
+        width: fit-content;
+        border-radius: 100px;
+        background-color: $color-accent;
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  font-size: 105px;
+  @include adaptive-font(105, 60);
   font-weight: 800;
   letter-spacing: -5px;
 }
