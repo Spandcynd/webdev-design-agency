@@ -1,9 +1,12 @@
-.services {
+.blog {
+  &__title {
+    margin-bottom: 40px;
+  }
+
   .section-title {
     &__bullet {
       margin: 0 auto;
     }
-
     &__subtitle {
       width: fit-content;
       margin: 0 auto;
@@ -16,7 +19,7 @@
     }
   }
 
-  &__cards {
-    margin-top: 40px;
+  &__posts {
+    margin-bottom: 40px;
   }
 }
