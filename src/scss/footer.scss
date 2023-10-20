@@ -1,2 +1,19 @@
-footer {
+.footer {
+  background-color: $color-tertiary;
+  &__container {
+  }
+  &__upper-container {
+    display: flex;
+  }
+  &__socials {
+    display: flex;
+    width: fit-content;
+    > * {
+      flex-basis: 25%;
+    }
+  }
+  &__icon-container {
+    padding: 20px;
+    background-color: black;
+  }
 }
