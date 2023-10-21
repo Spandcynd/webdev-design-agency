@@ -1,19 +1,123 @@
 .footer {
   background-color: $color-tertiary;
+  background-image: url('@img/bg-lines.svg');
+  background-size: cover;
+
   &__container {
+    padding-bottom: 40px;
   }
+
   &__upper-container {
     display: flex;
-  }
-  &__socials {
-    display: flex;
-    width: fit-content;
+    justify-content: space-between;
     > * {
-      flex-basis: 25%;
+      align-self: center;
     }
   }
+  &__socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+  }
   &__icon-container {
-    padding: 20px;
+    padding: 0.77em;
     background-color: black;
+    border-radius: 100px;
+  }
+  &__social-icon {
+    text-align: center;
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: $color-secondary;
+    margin: 60px 0 80px;
+  }
+
+  &__middle-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-middle {
+    &__left-side {
+    }
+    &__text {
+      color: $color-secondary;
+      font-size: 24px;
+    }
+    &__email {
+      font-size: 60px;
+      font-weight: 800;
+      margin: 0.34em 0;
+    }
+    &__copyrights {
+      margin-top: 82px;
+      color: $color-secondary;
+    }
+
+    &__right-side {
+    }
+    &__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__link {
+      color: $color-secondary;
+      text-transform: capitalize;
+      text-decoration: none;
+      padding: 0.5em 0;
+    }
+    &__link:hover {
+      transform: scale(1.02);
+    }
+    &__form {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__input,
+    &__button {
+      border: none;
+      padding: 1.375em;
+      box-sizing: content-box;
+      height: 1em;
+      font: inherit;
+    }
+    &__input {
+      border-radius: 10px 0 0 10px;
+      background-color: $color-primary;
+      flex-grow: 1;
+    }
+    &__button {
+      border-radius: 0 10px 10px 0;
+      background-color: $color-accent;
+      font-weight: 800;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+
+  &__lower-container {
+    margin-top: 80px;
+  }
+  .container-lower {
+    &__additional-links {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    &__link {
+      text-decoration: none;
+      color: $color-secondary;
+      padding: 0.5em;
+    }
+    &__separator {
+      display: inline-block;
+      width: 0.3em;
+      height: 0.3em;
+      background-color: $color-secondary;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 0.5em;
+    }
   }
 }
