@@ -37,6 +37,15 @@
     &:hover::before {
       transform: rotateZ(190deg);
     }
+    // won't work for some reason
+    &:hover + div .main-link {
+      color: black;
+    }
+
+    @media (max-width: #{$bp-lg + px}) {
+      left: auto;
+      right: 30%;
+    }
   }
 
   &__contacts {
@@ -60,16 +69,5 @@
 
   &__main h1 {
     margin-bottom: 0.5em;
-  }
-
-  a {
-    display: inline-block;
-    padding: 22px 50px;
-    color: inherit;
-    vertical-align: middle;
-    background-color: $color-accent;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-weight: 600;
   }
 }

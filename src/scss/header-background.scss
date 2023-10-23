@@ -8,6 +8,13 @@
 
   position: absolute;
   z-index: -1;
+
+  > * {
+    align-self: stretch;
+  }
+
+  @media (max-width: #{$bp-xl + px}) {
+  }
 }
 
 .header-background-1,

@@ -70,13 +70,7 @@
     }
 
     &__link {
-      display: inline-block;
-      text-transform: capitalize;
-      text-decoration: none;
-      color: inherit;
       font-weight: 800;
-      padding: 25px 50px;
-      background-color: $color-accent;
     }
   }
 }
