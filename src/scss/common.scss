@@ -1,5 +1,9 @@
 @use 'sass:math';
 
+html {
+  font-size: 16px;
+}
+
 .container {
   max-width: $cont-dis + px;
   margin: 0 auto;
@@ -16,49 +20,124 @@ body.borders .container {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
 
 .main-link {
-  display: inline-block;
   padding: math.div(25, 16) + em math.div(50, 16) + em;
   background-color: $color-accent;
   text-transform: capitalize;
-  font-weight: 600;
+}
+
+.icon-link {
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.nav-link {
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0.3125em;
+    height: 0.3125em;
+    border-radius: 50%;
+    background-color: $color-primary;
+    margin-right: 0.375em;
+    vertical-align: middle;
+  }
 }
 
 .section-title {
   line-height: 1.3;
   &__bullet {
-    width: 8px;
-    height: 8px;
     background-color: $color-accent;
     border-radius: 50%;
   }
 
   &__subtitle h2 {
-    font-size: 14px;
-    font-weight: 500;
     color: $color-secondary;
     text-transform: uppercase;
-    margin-top: calc(16 / 14) + em;
-    margin-bottom: calc(8 / 14) + em;
+    margin-top: 1.15em;
+    margin-bottom: 0.55em;
   }
 
   &__main-text {
-    @include adaptive-font(50, 34);
-    font-weight: 800;
     text-transform: capitalize;
   }
 }
 
-.cards {
+.image-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  @media (max-width: #{$bp-lg + px}) {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  @media (max-width: #{$bp-md + px}) {
+    max-width: 400px;
+  }
+}
+
+.image-card {
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
   > * {
-    flex-basis: 25%;
+    align-self: flex-end;
+    flex-basis: 100%;
+  }
+
+  &__text-zone {
+    background-color: $color-tertiary;
+    margin: 20px;
+    padding: 24px 32px;
+    position: relative;
+  }
+  &__text {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  &__badge-container {
+    position: absolute;
+    top: -50%;
+    right: 20px;
+    padding: 12px;
+    width: fit-content;
+    border-radius: 100px;
+    background-color: $color-accent;
+  }
+  &__badge {
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  --width: 80%;
+  --padding: 20px;
+
+  @media (max-width: #{$bp-xl + px}) {
+    grid-template-columns: repeat(2, 1fr);
+    width: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: #{$bp-md + px}) {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    max-width: calc((#{$bp-md + px} - var(--padding) * 2) * 0.8);
+    // max-width: calc((#{$bp-md + px} - var(--padding) * 2) * (var(--width) / 100));
   }
 }
 
@@ -100,11 +179,9 @@ a {
 }
 
 .posts {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  > * {
-    flex-basis: 33.333%;
-  }
 }
 
 .post {

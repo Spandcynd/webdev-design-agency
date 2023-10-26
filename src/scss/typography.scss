@@ -6,7 +6,11 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.header__nav {
+.main-link {
+  font-weight: 600;
+}
+
+.nav-link {
   font-weight: 600;
 }
 
@@ -14,4 +18,43 @@ h1 {
   @include adaptive-font(105, 60);
   font-weight: 800;
   letter-spacing: -5px;
+}
+
+h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.section-title {
+  &__bullet {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  &__subtitle h2 {
+  }
+
+  &__main-text {
+    @include adaptive-font(50, 34);
+    font-weight: 800;
+  }
+}
+
+.image-card__text {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.about-agency {
+  &__text {
+    font-size: 1.125em;
+    font-weight: 600;
+  }
+  &__subtext {
+    font-size: 1em;
+    font-weight: 500;
+  }
+  &__link {
+    font-weight: 800;
+  }
 }

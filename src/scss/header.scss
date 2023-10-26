@@ -28,23 +28,9 @@
     gap: 54px;
   }
 
-  &__li {
-    white-space: nowrap;
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: $color-primary;
-      margin-right: 6px;
-      vertical-align: middle;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+  &__nav-link {
+    &:hover {
+      transform: scale(1.05);
     }
   }
 
