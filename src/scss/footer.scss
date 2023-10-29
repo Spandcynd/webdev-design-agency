@@ -5,6 +5,9 @@
 
   &__container {
     padding-bottom: 40px;
+    @media (max-width: #{$bp-sm + px}) {
+      padding: 40px 20px;
+    }
   }
 
   &__upper-container {
@@ -12,6 +15,10 @@
     justify-content: space-between;
     > * {
       align-self: center;
+    }
+    @media (max-width: #{$bp-sm + px}) {
+      flex-direction: column;
+      gap: 50px;
     }
   }
   &__socials {
@@ -32,6 +39,9 @@
     height: 1px;
     background-color: $color-secondary;
     margin: 60px 0 80px;
+    @media (max-width: #{$bp-sm + px}) {
+      margin: 20px 0 30px;
+    }
   }
 
   &__middle-container {
@@ -52,13 +62,16 @@
       font-size: 24px;
     }
     &__email {
-      @include adaptive-property(font-size, 60, 32);
+      @include adaptive-property(font-size, 60, 24);
       font-weight: 800;
       margin: 0.34em 0;
     }
     &__copyrights {
       margin-top: 82px;
       color: $color-secondary;
+      @media (max-width: #{$bp-sm + px}) {
+        margin-top: 30px;
+      }
     }
 
     &__right-side {

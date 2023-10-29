@@ -21,5 +21,8 @@
 
   &__posts {
     margin-bottom: 40px;
+    @media (max-width: #{$bp-md + px}) {
+      margin-bottom: 20px;
+    }
   }
 }

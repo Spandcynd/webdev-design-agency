@@ -12,6 +12,7 @@
     @media (max-width: #{$bp-md + px}) {
       flex-direction: column;
       align-items: center;
+      padding: 20px 0;
     }
   }
   &__main-text {
