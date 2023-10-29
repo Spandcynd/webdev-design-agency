@@ -52,7 +52,7 @@
       font-size: 24px;
     }
     &__email {
-      @include adaptive-font(60, 32);
+      @include adaptive-property(font-size, 60, 32);
       font-weight: 800;
       margin: 0.34em 0;
     }

@@ -21,3 +21,18 @@ const toggleBordersNode = document.getElementById('toggle-borders');
 toggleBordersNode.addEventListener('click', e => {
   bodyNode.classList.toggle('borders');
 });
+
+const button = document.querySelector('.header__toggle-burger');
+const burgerNav = document.querySelector('.header__burger-nav');
+
+button.addEventListener('click', () => {
+  burgerNav.classList.toggle('header__burger-nav_unfolded');
+});
+
+burgerNav.addEventListener('click', e => {
+  if (e.target.closest('.header__burger-li')) {
+    console.log('True');
+  } else {
+    burgerNav.classList.toggle('header__burger-nav_unfolded');
+  }
+});

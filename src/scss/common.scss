@@ -124,20 +124,15 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 
-  --width: 80%;
-  --padding: 20px;
-
   @media (max-width: #{$bp-xl + px}) {
     grid-template-columns: repeat(2, 1fr);
-    width: var(--width);
-    margin-left: auto;
-    margin-right: auto;
+    @include adaptive-property(margin-left, 80, 24);
+    @include adaptive-property(margin-right, 80, 24);
   }
   @media (max-width: #{$bp-md + px}) {
     grid-template-columns: repeat(1, 1fr);
-    width: 100%;
-    max-width: calc((#{$bp-md + px} - var(--padding) * 2) * 0.8);
-    // max-width: calc((#{$bp-md + px} - var(--padding) * 2) * (var(--width) / 100));
+    @include adaptive-property(margin-left, 180, 24);
+    @include adaptive-property(margin-right, 180, 24);
   }
 }
 
