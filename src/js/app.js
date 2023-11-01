@@ -36,3 +36,11 @@ burgerNav.addEventListener('click', e => {
     burgerNav.classList.toggle('header__burger-nav_unfolded');
   }
 });
+
+function sliderInit() {
+  // document.querySelector('.slider-container').slick();
+}
+
+$('.slider-container').slick();
+
+sliderInit();

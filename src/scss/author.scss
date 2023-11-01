@@ -1,8 +1,8 @@
 .author {
   background-image: url('@img/bg-waves.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 70%;
+  background-size: 140%;
+  background-position: 20% 70%;
 
   &__inner-container {
     padding: 80px 0;
@@ -15,6 +15,12 @@
       padding: 20px 0;
     }
   }
+  &__img-container {
+    flex-shrink: 0;
+  }
+  &__img-container img {
+    max-width: 100%;
+  }
   &__main-text {
     @include adaptive-property(font-size, 30, 24);
     color: $color-secondary;
@@ -22,14 +28,22 @@
     margin-bottom: 30px;
     line-height: 50px;
   }
+
   &__text-wrapper {
     white-space: nowrap;
+    @media (max-width: #{$bp-md + px}) {
+      white-space: wrap;
+    }
   }
   &__name {
     display: inline-block;
     font-size: 24px;
     font-weight: 800;
     margin-right: 20px;
+    @media (max-width: #{$bp-md + px}) {
+      margin-right: none;
+      margin-bottom: 15px;
+    }
   }
   &__post {
     font-size: 13px;

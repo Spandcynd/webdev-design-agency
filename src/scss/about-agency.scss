@@ -16,7 +16,13 @@
       flex-direction: column;
       align-items: stretch;
       padding: 50px 10%;
-      gap: 50px;
+      gap: 100px;
+    }
+    @media (max-width: #{$bp-md + px}) {
+      padding: 50px 10%;
+    }
+    @media (max-width: #{$bp-sm + px}) {
+      padding: 50px 10%;
     }
   }
 
@@ -26,8 +32,8 @@
     &::before {
       content: '';
       display: inline-block;
+      aspect-ratio: 1 / 1;
       width: math.floor(calc(190 / 588 * 100%));
-      height: math.floor(calc(190 / 588 * 100%));
       border-radius: 50%;
       background-color: $color-tertiary;
       position: absolute;
@@ -39,8 +45,8 @@
     &::after {
       content: '';
       display: inline-block;
+      aspect-ratio: 1 / 1;
       width: math.floor(calc(56 / 588 * 100%));
-      height: math.floor(calc(56 / 588 * 100%));
       border-radius: 50%;
       background-color: $color-accent;
       position: absolute;
@@ -56,8 +62,8 @@
       object-fit: cover;
     }
 
-    @media (max-width: #{$bp-md + px}) {
-      width: 70%;
+    @media (max-width: #{$bp-lg + px}) {
+      width: 60%;
     }
   }
 

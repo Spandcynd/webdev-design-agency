@@ -10,10 +10,10 @@ html {
   padding: 80px 20px;
   box-sizing: content-box;
   @media (max-width: #{$bp-md + px}) {
-    padding: 40px 20px;
+    padding: 40px 5%;
   }
   @media (max-width: #{$bp-sm + px}) {
-    padding: 20px;
+    padding: 20px 5%;
   }
 }
 
@@ -248,4 +248,9 @@ a {
     line-height: 1.3;
     margin-top: 10px;
   }
+}
+
+// Slider
+
+.slider-item {
 }
