@@ -37,10 +37,20 @@ burgerNav.addEventListener('click', e => {
   }
 });
 
-function sliderInit() {
-  // document.querySelector('.slider-container').slick();
-}
-
-$('.slider-container').slick();
-
-sliderInit();
+$('.slick').slick({
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 770,
+      setting: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});

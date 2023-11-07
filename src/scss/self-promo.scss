@@ -1,22 +1,96 @@
 .self-promo {
-  &__image-card {
-    &:nth-child(1) {
-      background-image: url('@img/image3.png');
+  overflow-x: hidden;
+  position: relative;
+
+  &__vignette {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      black,
+      5%,
+      transparent,
+      20%,
+      transparent,
+      80%,
+      transparent,
+      95%,
+      black
+    );
+  }
+
+  &__image-card-1 {
+    background-image: url('@img/image3.png');
+  }
+  &__image-card-2 {
+    background-image: url('@img/image4.png');
+  }
+  &__image-card-3 {
+    background-image: url('@img/image5.png');
+  }
+
+  .slick {
+    &-slider.slick-initialized {
     }
-    &:nth-child(2) {
-      background-image: url('@img/image4.png');
+    /* Слайдер с точками */
+    &-slider.slick-dotted {
     }
-    &:nth-child(3) {
-      background-image: url('@img/image5.png');
+    /* Ограничивающая оболочка */
+    &-list {
     }
-    &:nth-child(4) {
-      background-image: url('@img/image3.png');
+    /* Лента слайдов */
+    &-track {
+      display: flex;
+      gap: 20px;
     }
-    &:nth-child(5) {
-      background-image: url('@img/image4.png');
+    /* Слайд */
+    &-slide {
     }
-    &:nth-child(6) {
-      background-image: url('@img/image5.png');
+    /* Слайд активный (показывается) */
+    &-slide.slick-active {
+    }
+    /* Слайд основной */
+    &-slide.slick-current {
+    }
+    /* Слайд по центру */
+    &-slide.slick-center {
+    }
+    /* Клонированный слайд */
+    &-slide.slick-cloned {
+    }
+    /* Стрелка */
+    &-arrow {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      font-size: 0;
+      opacity: 0;
+    }
+    /* Стрелка влево */
+    &-arrow.slick-prev {
+      right: 90%;
+    }
+    /* Стрелка вправо */
+    &-arrow.slick-next {
+      left: 90%;
+    }
+    /* Стрелка не активная */
+    &-arrow.slick-disabled {
+    }
+    /* Точки (булиты) */
+    &-dots {
+    }
+    &-dots li {
+    }
+    /* Активная точка */
+    &-dots li.slick-active {
+    }
+    /* Элемент точки */
+    &-dots li button {
     }
   }
 }
