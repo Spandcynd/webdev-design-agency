@@ -7,13 +7,13 @@ html {
 .container {
   max-width: $cont-dis + px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: $cont-padding-ver $cont-padding-hor;
   box-sizing: content-box;
   @media (max-width: #{$bp-md + px}) {
-    padding: 40px 5%;
+    padding: $cont-padding-ver-md $cont-padding-hor-md;
   }
   @media (max-width: #{$bp-sm + px}) {
-    padding: 20px 5%;
+    padding: $cont-padding-ver-sm $cont-padding-hor-sm;
   }
 }
 

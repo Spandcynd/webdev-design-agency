@@ -1,5 +1,5 @@
-.header-background-container {
-  height: 745px;
+.header-background {
+  // height is calculated with js
   width: 100vw;
   max-width: 100%;
   display: flex;
@@ -9,26 +9,26 @@
   position: absolute;
   z-index: -1;
 
-  > * {
-    align-self: stretch;
+  @media (max-width: #{$bp-md + px}) {
+    gap: 50px;
   }
-
-  @media (max-width: #{$bp-xl + px}) {
+  @media (max-width: #{$bp-sm + px}) {
+    gap: 30px;
   }
 }
 
-.header-background-1,
-.header-background-2 {
+.header-background__image1,
+.header-background__image2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.header-background-1 {
+.header-background__image1 {
   background-image: url('@img/image1.png');
   flex-basis: 230px;
 }
 
-.header-background-2 {
+.header-background__image2 {
   background-image: url('@img/image2.png');
   flex-basis: 478px;
 }

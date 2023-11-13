@@ -7,6 +7,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
     background-image: linear-gradient(
       to right,
       black,
@@ -43,7 +44,6 @@
     /* Лента слайдов */
     &-track {
       display: flex;
-      gap: 20px;
     }
     /* Слайд */
     &-slide {
@@ -91,6 +91,22 @@
     }
     /* Элемент точки */
     &-dots li button {
+    }
+
+    @media (min-width: #{$bp-lg+1 + px}) {
+      &-track {
+        gap: 20px;
+      }
+    }
+    @media (max-width: #{$bp-lg + px}) {
+      &-slide:not(:first-child) {
+        margin-left: 15px;
+      }
+    }
+    @media (max-width: #{$bp-md + px}) {
+      &-slide:not(:first-child) {
+        margin-left: 50px;
+      }
     }
   }
 }

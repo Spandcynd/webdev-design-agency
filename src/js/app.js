@@ -16,41 +16,51 @@
 // });
 
 const bodyNode = document.querySelector('body');
-const toggleBordersNode = document.getElementById('toggle-borders');
 
-toggleBordersNode.addEventListener('click', e => {
-  bodyNode.classList.toggle('borders');
-});
+function setupBorderToggler() {
+  const toggleBordersNode = document.getElementById('toggle-borders');
 
-const button = document.querySelector('.header__toggle-burger');
-const burgerNav = document.querySelector('.header__burger-nav');
+  toggleBordersNode.addEventListener('click', e => {
+    bodyNode.classList.toggle('borders');
+  });
+}
 
-button.addEventListener('click', () => {
-  burgerNav.classList.toggle('header__burger-nav_unfolded');
-});
+function setupBurgerLogic() {
+  const button = document.querySelector('.header__toggle-burger');
+  const burgerNav = document.querySelector('.header__burger-nav');
 
-burgerNav.addEventListener('click', e => {
-  if (e.target.closest('.header__burger-li')) {
-    console.log('True');
-  } else {
+  button.addEventListener('click', () => {
     burgerNav.classList.toggle('header__burger-nav_unfolded');
-  }
-});
+  });
 
-$('.slick').slick({
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 770,
-      setting: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-});
+  burgerNav.addEventListener('click', e => {
+    if (e.target.closest('.header__burger-li')) {
+      console.log('True');
+    } else {
+      burgerNav.classList.toggle('header__burger-nav_unfolded');
+    }
+  });
+}
+
+function setHeightForHeaderBgImage() {
+  const headerBg = document.getElementById('header-background');
+  const header = document.querySelector('.header__container');
+  const intro = document.querySelector('.intro__container');
+
+  function setSize() {
+    headerHeight = header.offsetHeight;
+    introHeight = intro.offsetHeight;
+    headerBg.style.height = headerHeight + introHeight + 'px';
+  }
+
+  setSize();
+
+  window.addEventListener('resize', setSize);
+}
+
+setupBorderToggler();
+setupBurgerLogic();
+
+window.onload = function () {
+  setHeightForHeaderBgImage();
+};
