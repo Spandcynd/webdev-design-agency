@@ -1,14 +1,14 @@
-import webpackStream from 'webpack-stream';
+import webpackStream from "webpack-stream";
 
 export function js() {
   return (
     app.gulp
-      .src(app.path.src.js, { sourcemaps: true })
+      .src(app.path.src.index.js, { sourcemaps: true })
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
-            title: 'JS',
-            message: 'Error: <%= error.message %>',
+            title: "JS",
+            message: "Error: <%= error.message %>",
           })
         )
       )
@@ -20,7 +20,7 @@ export function js() {
       //     },
       //   })
       // )
-      .pipe(app.gulp.dest(app.path.build.js))
+      .pipe(app.gulp.dest(app.path.build.index.js))
       .pipe(app.plugins.browserSync.stream())
   );
 }
