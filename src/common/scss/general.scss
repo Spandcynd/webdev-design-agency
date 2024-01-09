@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 html {
   font-size: 16px;
@@ -48,7 +48,7 @@ a {
   white-space: nowrap;
 
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 0.3125em;
     height: 0.3125em;
@@ -128,16 +128,16 @@ a {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
 
   @media (max-width: #{$bp-xl + px}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     @include adaptive-property(margin-left, 80, 24);
     @include adaptive-property(margin-right, 80, 24);
   }
   @media (max-width: #{$bp-md + px}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     @include adaptive-property(margin-left, 180, 24);
     @include adaptive-property(margin-right, 180, 24);
   }
@@ -183,16 +183,16 @@ a {
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 
   @media (max-width: #{$bp-xl + px}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     @include adaptive-property(margin-left, 80, 24);
     @include adaptive-property(margin-right, 80, 24);
   }
   @media (max-width: #{$bp-md + px}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     @include adaptive-property(margin-left, 180, 24);
     @include adaptive-property(margin-right, 180, 24);
   }
@@ -219,7 +219,7 @@ a {
     font-weight: 500;
   }
   &__theme::before {
-    content: "";
+    content: '';
     display: inline-block;
     height: 1px;
     width: 40px;
@@ -234,7 +234,7 @@ a {
     font-weight: 500;
   }
   &__status::before {
-    content: "";
+    content: '';
     display: inline-block;
     height: 0.15em;
     width: 0.15em;

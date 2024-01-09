@@ -1,8 +1,8 @@
-import * as nodePath from "path";
+import * as nodePath from 'path';
 
 const rootFolder = nodePath.basename(nodePath.resolve());
-const buildFolder = "./dist";
-const srcFolder = "./src";
+const buildFolder = './dist';
+const srcFolder = './src';
 
 // export const path = {
 //   build: {
@@ -40,14 +40,15 @@ export const path = {
       css: `${buildFolder}/index/css/`,
       js: `${buildFolder}/index/js/`,
       img: `${buildFolder}/index/img/`,
+      fonts: `${buildFolder}/index/fonts/`,
     },
     about: {
       html: `${buildFolder}/about/`,
       css: `${buildFolder}/about/css/`,
       js: `${buildFolder}/about/js/`,
       img: `${buildFolder}/about/img/`,
+      fonts: `${buildFolder}/about/fonts/`,
     },
-    fonts: `${buildFolder}/fonts`,
   },
   src: {
     index: {
@@ -83,8 +84,9 @@ export const path = {
   },
   clean: [
     `${buildFolder}/**`,
-    `!${buildFolder}/**/img`,
-    `!${buildFolder}/fonts`,
+    `!${buildFolder}/index`,
+    `!${buildFolder}/index/img`,
+    `!${buildFolder}/index/fonts`,
   ],
   fullClean: `${buildFolder}/**`,
   buildFolder: buildFolder,

@@ -1,20 +1,21 @@
-@import "../../../common/scss/reset";
-@import "../../../common/scss/config";
-@import "../../../common/scss/icon-font";
+@import '../../../common/scss/reset';
+@import '../../../common/scss/config';
+@import '../../../common/scss/icon-font';
 
-@import "../../../common/scss/typography";
-@import "../../../common/scss/general";
+@import '../../../common/scss/typography';
+@import '../../../common/scss/general';
+@import 'misc';
 
-@import "slick-slider";
+@import 'slick-slider';
 
-@import "header-background";
-@import "../../../common/scss/header";
-@import "intro";
-@import "self-promo";
-@import "about-agency";
-@import "news-ticker";
-@import "team";
-@import "services";
-@import "author";
-@import "blog";
-@import "../../../common/scss/footer";
+@import 'header-background';
+@import '../../../common/scss/header';
+@import 'intro';
+@import 'self-promo';
+@import 'about-agency';
+@import 'news-ticker';
+@import 'team';
+@import 'services';
+@import 'author';
+@import 'blog';
+@import '../../../common/scss/footer';

@@ -1,4 +1,4 @@
-import { deleteAsync } from "del";
+import { deleteAsync } from 'del';
 
 export function clean() {
   return deleteAsync(app.path.clean);

@@ -20,7 +20,7 @@ const bodyNode = document.querySelector('body');
 function setupBorderToggler() {
   const toggleBordersNode = document.getElementById('toggle-borders');
 
-  toggleBordersNode.addEventListener('click', e => {
+  toggleBordersNode.addEventListener('click', (e) => {
     bodyNode.classList.toggle('borders');
   });
 }
@@ -33,7 +33,7 @@ function setupBurgerLogic() {
     burgerNav.classList.toggle('header__burger-nav_unfolded');
   });
 
-  burgerNav.addEventListener('click', e => {
+  burgerNav.addEventListener('click', (e) => {
     if (e.target.closest('.header__burger-li')) {
       console.log('True');
     } else {

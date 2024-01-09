@@ -1,4 +1,4 @@
-import webpackStream from "webpack-stream";
+import webpackStream from 'webpack-stream';
 
 export function js() {
   return (
@@ -7,10 +7,10 @@ export function js() {
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
-            title: "JS",
-            message: "Error: <%= error.message %>",
-          })
-        )
+            title: 'JS',
+            message: 'Error: <%= error.message %>',
+          }),
+        ),
       )
       // .pipe(
       //   webpackStream({
