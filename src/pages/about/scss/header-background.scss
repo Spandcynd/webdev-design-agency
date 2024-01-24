@@ -1,0 +1,11 @@
+.header-background {
+  background-image: url('@img/header-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height is calculated with js
+  // width: auto;
+  // max-width: 100%;
+
+  position: absolute;
+  z-index: -1;
+}

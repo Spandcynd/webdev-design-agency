@@ -1,2 +1,5 @@
 src/pages/index/html/index.html
 src/pages/index/js/slick.js
+
+src/pages/about/html/index.html
+src/pages/about/js/slick.js

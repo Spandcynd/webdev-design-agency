@@ -1,9 +1,5 @@
 @use 'sass:math';
 
-html {
-  font-size: 16px;
-}
-
 .container {
   max-width: $cont-dis + px;
   margin: 0 auto;

@@ -49,6 +49,7 @@ export const path = {
       img: `${buildFolder}/about/img/`,
       fonts: `${buildFolder}/about/fonts/`,
     },
+    devEntry: `${buildFolder}/`,
   },
   src: {
     index: {
@@ -64,6 +65,7 @@ export const path = {
       img: `${srcFolder}/pages/about/img/**/*.*`,
     },
     fonts: `${srcFolder}/fonts/**/*.*`,
+    devEntry: `${srcFolder}/index.html`,
   },
   watch: {
     index: {
@@ -87,6 +89,9 @@ export const path = {
     `!${buildFolder}/index`,
     `!${buildFolder}/index/img`,
     `!${buildFolder}/index/fonts`,
+    `!${buildFolder}/about`,
+    `!${buildFolder}/about/img`,
+    `!${buildFolder}/about/fonts`,
   ],
   fullClean: `${buildFolder}/**`,
   buildFolder: buildFolder,
