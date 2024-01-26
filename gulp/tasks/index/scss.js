@@ -32,9 +32,8 @@ export function scss() {
     )
     .pipe(
       autoPrefixer({
-        grid: true,
+        grid: 'no-autoplace',
         overrideBrowserslist: ['last 3 versions'],
-        cascade: true,
       }),
     )
     .pipe(groupCssMediaQueries())
