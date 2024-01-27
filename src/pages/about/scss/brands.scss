@@ -1,0 +1,68 @@
+.brands {
+  &__container {
+  }
+  &__title {
+    position: relative;
+  }
+  &__title-line {
+    background-color: $color-secondary;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    z-index: -1;
+  }
+  &__title-text {
+    background-color: $color-background;
+    color: $color-secondary;
+    text-transform: uppercase;
+    padding-inline: 1.5em;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  &__brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    --font-size: 5.7em;
+    color: $color-secondary;
+    margin-top: calc(var(--font-size) * 0.9);
+  }
+  &__brands > *::before {
+    //   display: inline-block;
+  }
+
+  // display: flex;
+  // gap ?;
+  // font-size: ?px;
+
+  // * {
+  //   border: 1px solid red;
+  // }
+
+  .icon--oakville::before {
+    font-size: calc(0.65 * var(--font-size));
+    transform: translateY(-0.15em);
+  }
+
+  .icon--halton::before {
+    font-size: calc(1 * var(--font-size));
+    // transform: translateY(-0.15em);
+  }
+
+  .icon--first-class-flooring::before {
+    font-size: calc(0.67 * var(--font-size));
+    transform: translateY(-0.16em);
+  }
+
+  .icon--first-ontario::before {
+    font-size: calc(0.35 * var(--font-size));
+    // font-size: 0.35em;
+    transform: translateY(-0.75em);
+  }
+
+  .icon--ginos-pizza::before {
+    font-size: calc(0.96 * var(--font-size));
+  }
+}
