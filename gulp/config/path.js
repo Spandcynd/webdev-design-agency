@@ -4,35 +4,6 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 const buildFolder = './dist';
 const srcFolder = './src';
 
-// export const path = {
-//   build: {
-//     img: `${buildFolder}/img/`,
-//     css: `${buildFolder}/css/`,
-//     js: `${buildFolder}/js/`,
-//     html: `${buildFolder}/`,
-//     fonts: `${buildFolder}/fonts`,
-//   },
-//   src: {
-//     img: `${srcFolder}/img/**/*.*`,
-//     scss: `${srcFolder}/scss/style.scss`,
-//     js: `${srcFolder}/**/*.js`,
-//     html: `${srcFolder}/index.html`,
-//     fonts: `${srcFolder}/fonts/**/*.*`,
-//   },
-//   watch: {
-//     img: `${srcFolder}/**/*.{img,jpg,png,gif,webp,svg}`,
-//     scss: `${srcFolder}/scss/**/*.*`,
-//     js: `${srcFolder}/**/*.js`,
-//     html: `${srcFolder}/**/*.html`,
-//     fonts: `${srcFolder}/fonts/**/*.*`,
-//   },
-//   clean: [`${buildFolder}/**`, `!${buildFolder}/img`, `!${buildFolder}/fonts`],
-//   buildFolder: buildFolder,
-//   srcFolder: srcFolder,
-//   rootFolder: rootFolder,
-//   ftp: ``,
-// };
-
 export const path = {
   build: {
     index: {
@@ -49,13 +20,20 @@ export const path = {
       img: `${buildFolder}/about/img/`,
       fonts: `${buildFolder}/about/fonts/`,
     },
+    services: {
+      html: `${buildFolder}/services/`,
+      css: `${buildFolder}/services/css/`,
+      js: `${buildFolder}/services/js/`,
+      img: `${buildFolder}/services/img/`,
+      fonts: `${buildFolder}/services/fonts/`,
+    },
     devEntry: `${buildFolder}/`,
   },
   src: {
     index: {
       html: `${srcFolder}/pages/index/html/index.html`,
       scss: `${srcFolder}/pages/index/scss/style.scss`,
-      js: `${srcFolder}/pages/index/js/*.*`,
+      js: `${srcFolder}/pages/index/js/script.js`,
       img: `${srcFolder}/pages/index/img/**/*.*`,
       fonts: `${srcFolder}/fonts/**/*.*`,
     },
@@ -64,6 +42,13 @@ export const path = {
       scss: `${srcFolder}/pages/about/scss/style.scss`,
       js: `${srcFolder}/pages/about/js/script.js`,
       img: `${srcFolder}/pages/about/img/**/*.*`,
+      fonts: `${srcFolder}/fonts/**/*.*`,
+    },
+    services: {
+      html: `${srcFolder}/pages/services/html/index.html`,
+      scss: `${srcFolder}/pages/services/scss/style.scss`,
+      js: `${srcFolder}/pages/services/js/script.js`,
+      img: `${srcFolder}/pages/services/img/**/*.*`,
       fonts: `${srcFolder}/fonts/**/*.*`,
     },
     devEntry: `${srcFolder}/index.html`,
@@ -79,32 +64,34 @@ export const path = {
       scss: `${srcFolder}/pages/about/scss/*.*`,
       js: `${srcFolder}/pages/about/js/*.*`,
     },
+    services: {
+      html: `${srcFolder}/pages/services/html/*.*`,
+      scss: `${srcFolder}/pages/services/scss/*.*`,
+      js: `${srcFolder}/pages/services/js/*.*`,
+    },
     common: {
       html: `${srcFolder}/common/html/*.*`,
       scss: `${srcFolder}/common/scss/*.*`,
       js: `${srcFolder}/common/js/*.*`,
     },
   },
-  // clean: [
-  //   `${buildFolder}/**`,
-  //   `!${buildFolder}/index`,
-  //   `!${buildFolder}/index/img`,
-  //   `!${buildFolder}/index/fonts`,
-  //   `!${buildFolder}/about`,
-  //   `!${buildFolder}/about/img`,
-  //   `!${buildFolder}/about/fonts`,
-  // ],
   clean: {
-    index: {
-      html: `${buildFolder}/index/index.html`,
-      css: `${buildFolder}/index/css/**`,
-      js: `${buildFolder}/index/js/**`,
-    },
-    about: {
-      html: `${buildFolder}/about/index.html`,
-      css: `${buildFolder}/about/css/**`,
-      js: `${buildFolder}/about/js/**`,
-    },
+    index: [
+      `${buildFolder}/index/index.html`,
+      `${buildFolder}/index/css`,
+      `${buildFolder}/index/js`,
+    ],
+    about: [
+      `${buildFolder}/about/index.html`,
+      `${buildFolder}/about/css`,
+      `${buildFolder}/about/js`,
+    ],
+    services: [
+      `${buildFolder}/services/index.html`,
+      `${buildFolder}/services/css`,
+      `${buildFolder}/services/js`,
+    ],
+    devEntry: `${buildFolder}/index.html`,
   },
   fullClean: `${buildFolder}/**`,
   buildFolder: buildFolder,

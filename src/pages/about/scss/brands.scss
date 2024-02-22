@@ -1,4 +1,7 @@
 .brands {
+  overflow-x: hidden;
+  position: relative;
+
   &__container {
   }
   &__title {
@@ -22,15 +25,36 @@
   }
 
   &__brands {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     --font-size: 5.7em;
     color: $color-secondary;
     margin-top: calc(var(--font-size) * 0.9);
   }
-  &__brands > *::before {
-    //   display: inline-block;
+
+  .slick {
+    &-track {
+      display: flex;
+    }
+    &-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-arrow {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      font-size: 0;
+      opacity: 0;
+    }
+    &-arrow.slick-prev {
+      right: 90%;
+    }
+    &-arrow.slick-next {
+      left: 90%;
+    }
   }
 
   // display: flex;

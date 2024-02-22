@@ -3,3 +3,6 @@ src/pages/index/js/slick.js
 
 src/pages/about/html/index.html
 src/pages/about/js/slick.js
+
+src/pages/services/html/index.html
+src/pages/services/js/slick.js

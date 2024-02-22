@@ -1,20 +1,22 @@
-$('.slick').slick({
-  slidesToShow: 3,
-  infinite: false,
-  responsive: [
-    {
-      breakpoint: 992 + 1,
-      settings: {
-        slidesToShow: 2,
+(function () {
+  $('.slick').slick({
+    slidesToShow: 5,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 992 + 1,
+        settings: {
+          slidesToShow: 4,
+        },
       },
-    },
-    {
-      breakpoint: 770 + 1,
-      settings: {
-        centerMode: true,
-        centerPadding: '50px',
-        slidesToShow: 1,
+      {
+        breakpoint: 770 + 1,
+        settings: {
+          centerMode: true,
+          centerPadding: '50px',
+          slidesToShow: 2,
+        },
       },
-    },
-  ],
-});
+    ],
+  });
+})();

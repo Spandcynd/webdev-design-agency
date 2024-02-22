@@ -1,7 +1,7 @@
 import { deleteAsync } from 'del';
 
 export function clean(cleanPath) {
-  return function () {
+  return function clean() {
     return deleteAsync(cleanPath);
   };
 }

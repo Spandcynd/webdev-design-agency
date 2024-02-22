@@ -5,7 +5,7 @@ import gulpVersionNumber from 'gulp-version-number';
 import gulpPrettier from 'gulp-prettier';
 
 export function html(srcPath, buildPath) {
-  return function () {
+  return function html() {
     return (
       app.gulp
         .src(srcPath)

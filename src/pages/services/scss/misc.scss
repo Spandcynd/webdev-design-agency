@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color-primary;
+  background-color: $color-background;
+}
+
+body > button#toggle-borders {
+  position: fixed;
+  z-index: 1000;
+  top: 30px;
+  left: 30px;
+  padding: 5px;
+  color: white;
+  text-transform: uppercase;
+  background-color: black;
+  border: 1px dashed orange;
+
+  &:hover {
+    border-style: solid;
+  }
+}

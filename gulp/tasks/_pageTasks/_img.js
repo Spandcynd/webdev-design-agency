@@ -1,5 +1,5 @@
 export function img(srcPath, buildPath) {
-  return function () {
+  return function img() {
     return app.gulp.src(srcPath).pipe(app.gulp.dest(buildPath));
   };
 }

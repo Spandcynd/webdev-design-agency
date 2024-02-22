@@ -9,7 +9,7 @@ import cleanCss from 'gulp-clean-css';
 const gSass = gulpSass(sass);
 
 export function scss(srcPath, buildPath) {
-  return function () {
+  return function scss() {
     return app.gulp
       .src(srcPath, { sourcemaps: true })
       .pipe(

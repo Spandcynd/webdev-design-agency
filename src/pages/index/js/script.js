@@ -15,6 +15,9 @@
 //   }
 // });
 
+import './slick.js';
+import './initSlick.js';
+
 const bodyNode = document.querySelector('body');
 
 function setupBorderToggler() {
@@ -48,8 +51,8 @@ function setHeightForHeaderBgImage() {
   const intro = document.querySelector('.intro__container');
 
   function setSize() {
-    headerHeight = header.offsetHeight;
-    introHeight = intro.offsetHeight;
+    const headerHeight = header.offsetHeight;
+    const introHeight = intro.offsetHeight;
     headerBg.style.height = headerHeight + introHeight + 'px';
   }
 
