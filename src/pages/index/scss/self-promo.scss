@@ -37,9 +37,9 @@
       display: flex;
     }
     &-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;           //wtf
+      // justify-content: center; //wtf??
+      // align-items: center;     //wtf
     }
     &-arrow {
       position: absolute;

@@ -1,0 +1,60 @@
+.why-us {
+  &__container {
+    display: flex;
+    gap: 15%;
+    > * {
+      // flex: 1 1 auto;
+    }
+  }
+  &__main {
+    flex-basis: 35%;
+  }
+
+  &__title {
+    margin-bottom: 2em;
+  }
+
+  &__advantage {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+  }
+  &__advantage:not(:last-child) {
+    margin-bottom: 2em;
+  }
+  .advantage {
+    &__checkmark-container {
+      height: 3.5rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: $color-tertiary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__checkmark {
+      color: $color-accent;
+      font-size: 0.8125rem;
+    }
+    &__text-container {
+    }
+    &__heading {
+    }
+    &__description {
+      margin-top: 1em;
+      line-height: 1.875;
+      color: $color-secondary;
+    }
+  }
+
+  &__image-container {
+    flex-basis: 65%;
+  }
+  &__image {
+    border: 1px solid steelblue;
+    aspect-ratio: 1.135/1;
+    background: url('../img/why-us.png') 50%/50% no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+}
