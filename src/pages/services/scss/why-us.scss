@@ -3,27 +3,74 @@
     display: flex;
     justify-content: space-between;
     gap: 5%;
-    @media (max-width: #{$bp-lg + px}) {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      width: 80%;
-    }
   }
   &__main {
     flex: 0 1 40%;
+    min-width: 0;
+    @media (max-width: #{$bp-xl + px}) {
+      flex: 0 1 50%;
+    }
   }
 
   &__title {
     margin-bottom: 2em;
   }
 
+  @media (max-width: #{$bp-xl + px}) {
+    .slick {
+      position: relative;
+      overflow: hidden;
+      &-track {
+        display: flex;
+      }
+      &-slide {
+        user-select: none;
+      }
+      &-arrow {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 4rem;
+        z-index: 10;
+        font-size: 0;
+        opacity: 0;
+      }
+      &-arrow.slick-prev {
+        right: 90%;
+      }
+      &-arrow.slick-next {
+        left: 90%;
+      }
+      &-dots {
+        display: flex;
+        margin-inline: auto;
+        width: fit-content;
+      }
+      &-dots li {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+      }
+      &-dots button {
+        font-size: 0;
+        width: 0.5rem;
+        aspect-ratio: 1/1;
+        background-color: rgb(105, 105, 105);
+        border-radius: 50%;
+        padding: 0;
+        border: none;
+        transition: background-color 0.3s;
+      }
+      &-dots li.slick-active button {
+        background-color: white;
+      }
+    }
+  }
+
   &__advantage {
     display: flex;
     gap: 2em;
     align-items: flex-start;
-  }
-  &__advantage:not(:last-child) {
     margin-bottom: 2em;
   }
   .advantage {
@@ -52,10 +99,12 @@
   }
 
   &__image-container {
-    width: 100%;
     flex: 0 1 60%;
     max-width: 600px;
     padding: 3rem;
+    @media (max-width: #{$bp-xl + px}) {
+      flex: 0 1 50%;
+    }
   }
   &__image {
     position: relative;
