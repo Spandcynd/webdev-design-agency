@@ -22,7 +22,7 @@ $(document).ready(function () {
     .on(
       'resize',
       debounce(function () {
-        const slick = $('.slick');
+        const slick = $('.why-us__advantages.slick');
         if ($(window).width() <= 1200) {
           if (!slick.hasClass('slick-initialized')) {
             slick.slick({
@@ -41,3 +41,25 @@ $(document).ready(function () {
     )
     .trigger('resize');
 });
+
+(function () {
+  $('.brands__brands.slick').slick({
+    slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 992 + 1,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 770 + 1,
+        settings: {
+          centerMode: true,
+          centerPadding: '50px',
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+})();
