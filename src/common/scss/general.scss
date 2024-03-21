@@ -3,14 +3,16 @@
 .container {
   max-width: $cont-dis + px;
   margin: 0 auto;
-  padding: $cont-padding-ver $cont-padding-hor;
+  // padding: $cont-padding-ver $cont-padding-hor;
+  @include adaptive-property(padding-block, 80, 10);
+  @include adaptive-property(padding-inline, 20, 5);
   box-sizing: content-box;
-  @media (max-width: #{$bp-md + px}) {
-    padding: $cont-padding-ver-md $cont-padding-hor-md;
-  }
-  @media (max-width: #{$bp-sm + px}) {
-    padding: $cont-padding-ver-sm $cont-padding-hor-sm;
-  }
+  // @media (max-width: #{$bp-md + px}) {
+  //   padding: $cont-padding-ver-md $cont-padding-hor-md;
+  // }
+  // @media (max-width: #{$bp-sm + px}) {
+  //   padding: $cont-padding-ver-sm $cont-padding-hor-sm;
+  // }
 }
 
 body.borders .container {
@@ -32,6 +34,11 @@ a {
   padding: math.div(25, 16) + em math.div(50, 16) + em;
   background-color: $color-accent;
   text-transform: capitalize;
+  transition: all 0.2s;
+}
+.main-link:hover {
+  background-color: $color-primary;
+  color: $color-accent;
 }
 
 .icon-link {
@@ -40,23 +47,7 @@ a {
   }
 }
 
-.nav-link {
-  white-space: nowrap;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 0.3125em;
-    height: 0.3125em;
-    border-radius: 50%;
-    background-color: $color-primary;
-    margin-right: 0.375em;
-    vertical-align: middle;
-  }
-}
-
 .section-title {
-  line-height: 1.3;
   &__bullet {
     background-color: $color-accent;
     border-radius: 50%;
@@ -92,6 +83,7 @@ a {
   height: 280px;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 20px;
 
   display: flex;
   > * {
@@ -101,13 +93,22 @@ a {
 
   &__text-zone {
     background-color: $color-tertiary;
-    margin: 20px;
+    // margin: 20px;
     padding: 24px 32px;
     position: relative;
+    box-sizing: content-box;
+    height: 1em;
+    transition: height 0.2s;
+    overflow: hidden;
   }
-  &__text {
+  &__name {
     display: inline-block;
     white-space: nowrap;
+  }
+  &__description {
+    color: $color-secondary;
+    line-height: 1.5;
+    margin-top: 1.5em;
   }
   &__badge-container {
     position: absolute;
@@ -117,8 +118,19 @@ a {
     width: fit-content;
     border-radius: 100px;
     background-color: $color-accent;
+    transition: opacity 0.05s;
   }
-  &__badge {
+
+  &.active {
+    .image-card {
+      &__text-zone {
+        height: calc(100% - 2 * 24px);
+      }
+
+      &__badge-container {
+        opacity: 0;
+      }
+    }
   }
 }
 
@@ -141,7 +153,7 @@ a {
 
 .card {
   background-color: $color-tertiary;
-  @include adaptive-property(padding, 50, 25);
+  @include adaptive-property(padding, 50, 20);
   display: flex;
   flex-direction: column;
 
@@ -149,11 +161,21 @@ a {
     line-height: 1.3;
   }
 
+  &__icon,
+  &__name {
+  }
+  &:hover &__icon,
+  &:hover &__name {
+    color: $color-accent;
+  }
+
   &__icon {
+    transition: color 0.2s;
     @include adaptive-property(font-size, 72, 32);
   }
 
   &__name {
+    transition: color 0.4s;
     @include adaptive-property(margin-top, 24, 12);
     @include adaptive-property(margin-bottom, 24, 12);
     font-size: 18px;

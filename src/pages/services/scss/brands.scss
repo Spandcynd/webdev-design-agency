@@ -2,8 +2,6 @@
   overflow-x: hidden;
   position: relative;
 
-  &__container {
-  }
   &__title {
     position: relative;
   }
@@ -39,6 +37,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: color 0.2s;
+    }
+    &-slide:hover {
+      color: $color-primary;
     }
     &-arrow {
       position: absolute;

@@ -4,10 +4,7 @@
   background-size: cover;
 
   &__container {
-    padding-bottom: 40px;
-    @media (max-width: #{$bp-sm + px}) {
-      padding: 40px 20px;
-    }
+    @include adaptive-property(padding-bottom, 40, 10);
   }
 
   &__upper-container {
@@ -111,6 +108,13 @@
       font-weight: 800;
       color: inherit;
       cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover,
+      &:focus {
+        background-color: $color-background;
+        color: $color-accent;
+      }
     }
   }
 

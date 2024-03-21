@@ -73,6 +73,12 @@
     align-items: flex-start;
     margin-bottom: 2em;
   }
+  &__advantage:hover .advantage__checkmark-container {
+    background-color: $color-accent;
+  }
+  &__advantage:hover .advantage__checkmark {
+    color: $color-primary;
+  }
   .advantage {
     &__checkmark-container {
       height: 3.5rem;
@@ -82,8 +88,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: background-color 0.2s;
     }
     &__checkmark {
+      transition: color 0.2s;
       color: $color-accent;
       font-size: 0.8125rem;
     }

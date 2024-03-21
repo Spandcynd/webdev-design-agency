@@ -2,11 +2,9 @@
   text-shadow: 1px 1px 3px #00000080;
 
   &__container {
-    padding-top: 37px;
-    padding-bottom: 37px;
+    @include adaptive-property(padding-block, 40, 10);
     display: grid;
     grid-template-columns: 25% 50% 25%;
-
     & > * {
       justify-self: center;
       align-self: center;
@@ -37,7 +35,7 @@
     transform: translateY(-100%);
     top: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     background-color: rgba(12, 12, 12, 0.99);
     transition: transform 0.4s;
@@ -54,9 +52,11 @@
     margin: 0 auto;
   }
 
-  &__burger-li {
+  &__burger-nav-link {
+    text-align: center;
+    display: block;
     padding: 1em;
-    @include adaptive-property(font-size, 60, 20);
+    @include adaptive-property(font-size, 40, 20);
   }
 
   &__burger-line {
@@ -87,8 +87,31 @@
   }
 
   &__nav-link {
-    &:hover {
+    white-space: nowrap;
+    transition:
+      0.2s background-color,
+      0.2s color;
+    display: flex;
+    align-items: center;
+    outline: none;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 0.3125em;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: $color-primary;
+      margin-right: 0.375em;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
       transform: scale(1.05);
+      &::before {
+        background-color: $color-accent;
+      }
     }
   }
 
@@ -107,4 +130,8 @@
 }
 .mini-logo-part3 {
   background-color: $color-logo-part3;
+}
+
+body:has(.header__burger-nav_unfolded) {
+  overflow: hidden;
 }

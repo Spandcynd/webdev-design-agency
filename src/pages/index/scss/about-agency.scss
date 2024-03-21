@@ -4,7 +4,7 @@
   &__container {
     display: flex;
     justify-content: center;
-    gap: 6%;
+    @include adaptive-property(gap, 80, 20);
     padding-top: 120px;
     padding-bottom: 120px;
     > * {
@@ -15,14 +15,6 @@
     @media (max-width: #{$bp-lg + px}) {
       flex-direction: column;
       align-items: stretch;
-      padding: 50px 10%;
-      gap: 100px;
-    }
-    @media (max-width: #{$bp-md + px}) {
-      padding: 50px 10%;
-    }
-    @media (max-width: #{$bp-sm + px}) {
-      padding: 50px 10%;
     }
   }
 
@@ -69,11 +61,20 @@
 
   &__about {
     line-height: 1.3;
+    @media (max-width: #{$bp-lg + px}) {
+      text-align: center;
+      width: min(100% - 0.5em, 50ch);
+      // width: 50ch;
+    }
   }
 
   &__title {
   }
   .section-title {
+    &__bullet {
+      display: inline-block;
+    }
+
     &__main {
       margin-bottom: 40px;
     }

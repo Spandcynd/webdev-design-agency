@@ -61,8 +61,18 @@ function setHeightForHeaderBgImage() {
   window.addEventListener('resize', setSize);
 }
 
+function setupImageCardTogglers() {
+  $('.self-promo__image-card').on('click', function () {
+    $('.self-promo__image-card').each(function () {
+      $(this).removeClass('active');
+    });
+    $(this).addClass('active');
+  });
+}
+
 setupBorderToggler();
 setupBurgerLogic();
+setupImageCardTogglers();
 
 window.onload = function () {
   setHeightForHeaderBgImage();
